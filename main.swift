@@ -1,11 +1,13 @@
 // Link to problem: https://projecteuler.net/problem=4
 
 var max = 0
-var ones, tens, hundreds, thousands, tenThousands, hundredThousands
+var prod = 0
+var ones, tens, hundreds, thousands, tenThousands, hundredThousands: Integer
+
 
 for i in 100...999 {
 	for j in 100...999 {
-		var prod = i * j
+		prod = i * j
 
 		// determine if number is 5 digits or 6 digits
 		if prod < 100_000 {
@@ -20,7 +22,7 @@ for i in 100...999 {
 			tenThousands = prod
 			if ones == tenThousands && tens == thousands && prod > max {
 				max = prod
-				print("i * j = " + i + " * " + j + " = " i * j) 
+				print("i * j = \(i) * \(j) = \(i * j)") 
 			}
 		} else {
 			ones = prod % 10
@@ -36,7 +38,7 @@ for i in 100...999 {
 			hundredThousands = prod
 			if ones == hundredThousands && tens == tenThousands && hundreds == thousands && prod > max {
 				max = prod
-				print("i * j = " + i + " * " + j + " = " i * j) 
+				print("i * j = \(i) * \(j) = \(i * j)") 
 			}
 		}
 
