@@ -1,8 +1,6 @@
 // Link to problem: https://projecteuler.net/problem=4
 
-var max = 0
-var prod = 0
-var ones, tens, hundreds, thousands, tenThousands, hundredThousands: Int
+var prod, ones, tens, hundreds, thousands, tenThousands, hundredThousands: Int
 
 var prods: [Int] = []
 
@@ -16,6 +14,7 @@ for i in 100...999 {
 let sortedDescending = Array(prods.sorted().reversed())
 
 for num in sortedDescending {
+	prod = num
 	ones = prod % 10
 	prod /= 10
 	tens = prod % 10
