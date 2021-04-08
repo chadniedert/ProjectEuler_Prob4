@@ -2,7 +2,7 @@
 
 var max = 0
 var prod = 0
-var ones, tens, hundreds, thousands, tenThousands, hundredThousands: Integer
+var ones, tens, hundreds, thousands, tenThousands, hundredThousands: Int
 
 
 for i in 100...999 {
